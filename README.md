@@ -23,7 +23,7 @@ allprojects {
 In the `build.gradle` for your app.
 
 ```gradle
-compile 'com.newtronlabs.appsocket:appsocket:1.0.2'
+compile 'com.newtronlabs.appsocket:appsocket:1.0.4'
 ```
 
 ---
