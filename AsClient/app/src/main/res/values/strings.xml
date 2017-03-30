@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AsClient</string>
+
+    <string name="activity_title">App Socket - Client</string>
+
+    <string name="app_info_header">About</string>
+
+    <string name="app_info_content">The Newtron Labs App Socket library allows you to
+        exchange data between Android apps using sockets. This allows you to overcome the Android IPC 1MB limit.</string>
+
+    <string name="btn_start">Connect to Server</string>
+    <string name="btn_stop">Close Connection</string>
+</resources>
