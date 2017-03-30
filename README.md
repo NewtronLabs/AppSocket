@@ -26,7 +26,50 @@ In the `build.gradle` for your app.
 compile 'com.newtronlabs.appsocket:appsocket:1.0.4'
 ```
 
----
+### App Socket - Server
+From the server application create a server socket and listen for clients.
+
+```java
+// Create a server socket on port 2222
+IAppServerSocket serverSocket = new AppServerSocket(2222)
+
+// Wait for client to connect
+IAppSocket clientSocket = serverSocket.accept();
+
+// Get stream for writing to client.
+OutputStream os = clientSocket.getOutputStream();
+
+// Get stream for reading from the client
+InputStram is = clientSocket.getInputStream();
+```
+
+### App Socket - Client
+In order for an Android application to communicate with server app do the following:
+
+```java
+// This is the application id of the application that has the server socket.
+String serverAppId = "com.newtronlabs.appsockserver";
+
+// This is the port on which that app is listening on.
+int port = 2222;
+
+// Create the socket.
+IAppSocket socket = new AppSocket();
+
+// Connect to remote application.
+socket.connect(context, serverAppId, port);
+
+// Get stream for writing to the server.
+OutputStream os = clientSocket.getOutputStream();
+
+// Get stream for reading from the server
+InputStram is = clientSocket.getInputStream();
+
+```
+
+### Additional Samples
+A set of more complex exmaples can be found in this repo's samples folders: **AsServer** and **AsClient**. 
+
 ## License
 
 App Socket binaries and source code can only be used in accordance with Freeware license. That is, freeware may be used without payment, but may not be modified. The developer of App Socket retains all rights to change, alter, adapt, and/or distribute the software. App Socket is not liable for any damages and/or losses incurred during the use of App Socket.
