@@ -2,6 +2,10 @@
 
 The App Socket library allows for the creation of sockets between Android applications. This allows for the creation of Client-Server style applications among Android applications. Once the socket are connected, applications can share data with one another over these sockets.
 
+<p align="center">
+  <img src="https://github.com/NewtronLabs/AppSocket/blob/master/Diagram.png" width="56%" height="56%" >
+</p>
+
 ----
 
 
