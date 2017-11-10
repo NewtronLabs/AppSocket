@@ -33,13 +33,15 @@ allprojects {
         maven { url "http://code.newtronlabs.com:8081/artifactory/libs-release-local" }
     }
 }
+
+subprojects {
+    apply plugin: 'com.newtronlabs.android'
+}
 ```
 
 In the `build.gradle` for your app.
 
 ```gradle
-apply plugin: 'com.newtronlabs.android'
-
 dependencies {
     provided 'com.newtronlabs.appsocket:appsocket:2.0.0'
 }
